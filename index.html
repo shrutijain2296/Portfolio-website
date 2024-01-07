@@ -115,12 +115,13 @@
                     <a href = "images/Shruti Jain.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name = "submit-to-google-sheet">
                         <input type = "text" name = "Name" placeholder="Your Name" required>
                         <input type = "email" name = "Email" placeholder="Your Email" required>
                         <textarea name = "Message" rows = "6" placeholder="Your Message..."></textarea>
                         <button type = "submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id = "msg"></span>
                 </div>
             </div>
         </div>
@@ -128,7 +129,19 @@
     <div class="copyright">
         <p>Copyright © Shruti. Made with <i class="fa-solid fa-heart"></i> by Shruti Jain</p>
     </div>
-    <script src = "./script.js"> </script>
+    <script src = "./script.js"></script>
     <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby4Lxu7PYC3-oOvlA0scXoRA1cfbJ3WZSpMO5g_sJd9gQBVud0VpB-SjRgdkuljCU1v/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script> -->
 </body>
 </html>
